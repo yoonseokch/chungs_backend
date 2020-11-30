@@ -29,10 +29,11 @@ db.Board.Post.belongsTo(db.Board.Category,{
     foreignKey : 'boardCategory',
     targetKey : 'ID'
 })
-db.Board.Category.belongsTo(db.Board.Post,{
-    foreignKey : 'ID',
-    targetKey : 'boardCategory'
-})
+// db.Board.Category.belongsTo(db.Board.Post,{
+//     foreignKey : 'ID',
+//     targetKey : 'boardCategory'
+// })
+//sequelize.sync({force:true});
 // db.Precedent = require('./precedent.js')(sequelize, Sequelize);
 // db.Qna = require('./qna.js')(sequelize,Sequelize);
 // db.Lawyer = require('./lawyer.js')(sequelize,Sequelize);

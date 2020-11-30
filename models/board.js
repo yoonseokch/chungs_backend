@@ -4,27 +4,33 @@ module.exports = (sequelize, Datatypes) => {
         ID:
         {
           type: Datatypes.INTEGER,
+          autoIncrement: true,
           primaryKey: true
         },
         boardCategory:
         {
-          type: Datatypes.INTEGER
+          type: Datatypes.INTEGER,
+          allowNull: false
         },
         title:
         {
-          type: Datatypes.STRING
+          type: Datatypes.STRING,
+          allowNull: false
         },
         content:
         {
-          type: Datatypes.TEXT
+          type: Datatypes.TEXT,
+          allowNull: false
         },
         writtenDate:
         {
-          type: Datatypes.DATE
+          type: Datatypes.DATE,
+          allowNull: false
         },
         views:
         {
-          type:Datatypes.INTEGER
+          type:Datatypes.INTEGER,
+          allowNull: false
         }
       },
       {
@@ -35,42 +41,18 @@ module.exports = (sequelize, Datatypes) => {
         ID:
         {
           type: Datatypes.INTEGER,
-          primaryKey: true
+          primaryKey: true,
+          autoIncrement: true
         },
         Name:
         {
-          type: Datatypes.STRING
+          type: Datatypes.STRING,
+          unique: true
         },
       },
       {
         freezeTableName: true,
         timestamps: false,
       }),
-    //   'Reply': sequelize.define('Reply', {
-    //     ID:
-    //     {
-    //       type: Datatypes.INTEGER,
-    //       primaryKey: true,
-    //       autoincremnt : true
-    //     },
-    //     content: {
-    //       type : Datatypes.STRING
-    //     },
-    //     writtenDate : {
-    //       type : Datatypes.DATE
-    //     },
-    //     reports : {
-    //       type : Datatypes.INTEGER
-    //     },
-    //     Post_ID : {
-    //       type : Datatypes.INTEGER
-    //     },
-    //     User_ID : {
-    //       type : Datatypes.INTEGER
-    //     }
-    //   },
-    //   {
-    //     freezeTableName: true,timestamps: false
-    //   }),
      }
 };

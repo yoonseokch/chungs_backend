@@ -1,9 +1,10 @@
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 const db = require('./models/index.js');
 const express = require('express');
 const app = express();
 app.use(express.json()); 
 app.use('/post',require('./routes/post.js'));
+app.use('/category',require('./routes/category.js'));
 app.use((req, res, next) => {
 	res.status(404).send("요청하신 페이지는 존재하지 않습니다.");
 });
