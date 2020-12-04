@@ -47,7 +47,8 @@ module.exports = (sequelize, Datatypes) => {
         Name:
         {
           type: Datatypes.STRING,
-          unique: true
+          unique: true,
+          allowNull: false
         },
       },
       {

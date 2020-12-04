@@ -25,6 +25,7 @@ db.sequelize = sequelize;
 //sequelize.sync();
 // db.User = require('./user.js')(sequelize, Sequelize);
 db.Board = require('./board.js')(sequelize, Sequelize);
+db.Profile = require('./profile.js')(sequelize, Sequelize);
 db.Board.Post.belongsTo(db.Board.Category,{
     foreignKey : 'boardCategory',
     targetKey : 'ID'
