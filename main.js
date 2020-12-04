@@ -2,6 +2,7 @@ const port = process.env.PORT || 8080;
 const db = require('./models/index.js');
 const express = require('express');
 const app = express();
+app.use(require('cors'));
 app.use(express.json()); 
 app.use('/post',require('./routes/post.js'));
 app.use('/category',require('./routes/category.js'));
